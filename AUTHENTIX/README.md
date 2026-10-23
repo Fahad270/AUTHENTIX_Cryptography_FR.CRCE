@@ -23,13 +23,13 @@ used by a learning-platform metadata form or embedded experiment page.
 
 | Section | Raw Markdown file |
 |---|---|
-| [Aim](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/aim.md) | [aim.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/aim.md) |
-| [Theory](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/theory.md) | [theory.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/theory.md) |
-| [Objective](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/objective.md) | [objective.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/objective.md) |
-| [Procedure](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/procedure.md) | [procedure.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/procedure.md) |
-| [Simulation](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/simulation.md) | [simulation.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/simulation.md) |
-| [Quiz](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/quiz.md) | [quiz.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/quiz.md) |
-| [References](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/references.md) | [references.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/references.md) |
+| [Aim](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/aim.md) | [aim.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/aim.md) |
+| [Theory](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/theory.md) | [theory.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/theory.md) |
+| [Objective](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/objective.md) | [objective.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/objective.md) |
+| [Procedure](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/procedure.md) | [procedure.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/procedure.md) |
+| [Simulation](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/simulation.md) | [simulation.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/simulation.md) |
+| [Quiz](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/quiz.md) | [quiz.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/quiz.md) |
+| [References](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/references.md) | [references.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/docs/references.md) |
 
 ---
 
