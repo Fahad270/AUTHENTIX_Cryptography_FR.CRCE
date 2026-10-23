@@ -6,7 +6,7 @@
 A 3rd-year BTech Cryptography project: a controlled, full-stack authentication
 security lab that demonstrates three credential-based attacks — **Brute
 Force**, **Credential Stuffing**, and **Password Spraying** — against mock
-accounts, end-to-end:
+accounts, end-to-end: The docs have the aim and all required contents
 
 ```
 React UI → Backend API → Authentication Engine → MongoDB → Attack Simulation → Event Logging → Dashboard
