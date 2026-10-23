@@ -18,8 +18,9 @@ and produces *real* MongoDB records — nothing on the dashboard is hardcoded.
 ## Experiment Documentation
 
 The complete experiment is divided into the following Markdown sections. The
-links below point directly to each file's raw GitHub content, so they can be
-used by a learning-platform metadata form or embedded experiment page.
+files are stored in the repository-level `docs/` directory. The links below
+point directly to each file's raw GitHub content, so they can be used by a
+learning-platform metadata form or embedded experiment page.
 
 | Section | Raw Markdown file |
 |---|---|
@@ -120,6 +121,9 @@ AUTHENTIX/
 │       └── server.js
 │
 └── README.md  (this file)
+
+../docs/              Experiment content: aim, theory, objectives, procedure,
+                      simulation, quiz, and references
 ```
 
 ---
