@@ -15,6 +15,22 @@ React UI → Backend API → Authentication Engine → MongoDB → Attack Simula
 Every attack attempt runs through the *real* backend authentication service
 and produces *real* MongoDB records — nothing on the dashboard is hardcoded.
 
+## Experiment Documentation
+
+The complete experiment is divided into the following Markdown sections. The
+links below point directly to each file's raw GitHub content, so they can be
+used by a learning-platform metadata form or embedded experiment page.
+
+| Section | Raw Markdown file |
+|---|---|
+| [Aim](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/aim.md) | [aim.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/aim.md) |
+| [Theory](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/theory.md) | [theory.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/theory.md) |
+| [Objective](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/objective.md) | [objective.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/objective.md) |
+| [Procedure](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/procedure.md) | [procedure.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/procedure.md) |
+| [Simulation](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/simulation.md) | [simulation.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/simulation.md) |
+| [Quiz](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/quiz.md) | [quiz.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/quiz.md) |
+| [References](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/references.md) | [references.md](https://raw.githubusercontent.com/Fahad270/AUTHENTIX_Cryptography_FR.CRCE/main/AUTHENTIX/docs/references.md) |
+
 ---
 
 ## 👥 Team Members
