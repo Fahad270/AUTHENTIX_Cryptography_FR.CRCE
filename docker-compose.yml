@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./AUTHENTIX/backend
+    container_name: authentix-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://fahadsyed2705_db_user:p1BPLpNhgw3nF7tY@ac-bqyjnqw-shard-00-00.musnnvl.mongodb.net:27017,ac-bqyjnqw-shard-00-01.musnnvl.mongodb.net:27017,ac-bqyjnqw-shard-00-02.musnnvl.mongodb.net:27017/?ssl=true&replicaSet=atlas-lt2a7m-shard-0&authSource=admin&appName=Cluster0
+      - JWT_SECRET=rohitalstonhamzabushra
+      - JWT_EXPIRES_IN=8h
+      - FRONTEND_ORIGIN=http://localhost
+      - PHASE2_ENABLED=false
+    restart: always
+
+  seed:
+    build: ./AUTHENTIX/backend
+    container_name: authentix-seed
+    environment:
+      - MONGO_URI=mongodb://fahadsyed2705_db_user:p1BPLpNhgw3nF7tY@ac-bqyjnqw-shard-00-00.musnnvl.mongodb.net:27017,ac-bqyjnqw-shard-00-01.musnnvl.mongodb.net:27017,ac-bqyjnqw-shard-00-02.musnnvl.mongodb.net:27017/?ssl=true&replicaSet=atlas-lt2a7m-shard-0&authSource=admin&appName=Cluster0
+    entrypoint: ["node", "src/seed.js"]
+    restart: "no"
+
+  frontend:
+    build:
+      context: ./AUTHENTIX/frontend
+      args:
+        - VITE_API_URL=http://localhost/api
+    container_name: authentix-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always

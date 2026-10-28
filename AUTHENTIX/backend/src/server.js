@@ -16,6 +16,7 @@ const authRoutes = require('./routes/auth.routes');
 const attackRoutes = require('./routes/attack.routes');
 const eventRoutes = require('./routes/event.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const configRoutes = require('./routes/config.routes');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/attacks', attackRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/config', configRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Route not found.' });

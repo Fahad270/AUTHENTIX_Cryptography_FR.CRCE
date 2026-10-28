@@ -5,8 +5,9 @@ const router = express.Router();
 const requireAuth = require('../middleware/auth');
 const requireRole = require('../middleware/role');
 const ctrl = require('../controllers/attack.controller');
+const { attackLimiter } = require('../middleware/rateLimiter');
 
-router.use(requireAuth, requireRole('SECURITY_ADMIN'));
+router.use(requireAuth, requireRole('SECURITY_ADMIN'), attackLimiter);
 
 router.post('/bruteforce/start', ctrl.startBruteForce);
 router.post('/credential-stuffing/start', ctrl.startCredentialStuffing);

@@ -12,6 +12,7 @@ import AttackHistory from './pages/AttackHistory';
 import AuthLogs from './pages/AuthLogs';
 import Cryptography from './pages/Cryptography';
 import SecurityControls from './pages/SecurityControls';
+import Guide from './pages/Guide';
 
 function Page({ children, adminOnly }) {
   return (
@@ -32,6 +33,7 @@ export default function App() {
       <Route path="/logs" element={<Page adminOnly><AuthLogs /></Page>} />
       <Route path="/cryptography" element={<Page><Cryptography /></Page>} />
       <Route path="/security-controls" element={<Page><SecurityControls /></Page>} />
+      <Route path="/guide" element={<Page><Guide /></Page>} />
     </Routes>
   );
 }

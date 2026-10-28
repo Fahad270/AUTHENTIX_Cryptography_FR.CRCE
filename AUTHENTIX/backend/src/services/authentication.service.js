@@ -12,6 +12,7 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const eventService = require('./event.service');
+const { isPhase2Enabled } = require('../config/phase2');
 
 /**
  * Attempt to authenticate a username/password pair.
@@ -43,13 +44,45 @@ async function attemptLogin({ username, password, source, eventType, attackId = 
     return { success: false, user: null, failureReason: 'USER_NOT_FOUND' };
   }
 
+  // Phase 2: Account lockout check
+  if (isPhase2Enabled() && user.isLocked()) {
+    await eventService.createEvent({
+      username: normalizedUsername,
+      success: false,
+      failureReason: 'ACCOUNT_LOCKED',
+      eventType,
+      source,
+      attackId,
+      requestId,
+    });
+    return { success: false, user: null, failureReason: 'ACCOUNT_LOCKED' };
+  }
+
+  // Phase 2: Block login if account is already COMPROMISED
+  if (user.accountStatus === 'COMPROMISED') {
+    await eventService.createEvent({
+      username: normalizedUsername,
+      success: false,
+      failureReason: 'ACCOUNT_COMPROMISED',
+      eventType,
+      source,
+      attackId,
+      requestId,
+    });
+    return { success: false, user: null, failureReason: 'ACCOUNT_COMPROMISED' };
+  }
+
   const passwordMatches = await bcrypt.compare(password, user.passwordHash);
 
   if (!passwordMatches) {
-    // Phase 1 deliberately does NOT increment a lockout counter or block
-    // further attempts - see README "Phase 1 vs Phase 2".
-    user.failedAttempts += 1;
-    await user.save();
+    if (isPhase2Enabled()) {
+      // Phase 2: Increment failed attempts, lock if threshold reached
+      await user.recordFailedAttempt();
+    } else {
+      // Phase 1 behavior: just increment counter, no lockout
+      user.failedLoginAttempts += 1;
+      await user.save();
+    }
 
     await eventService.createEvent({
       username: normalizedUsername,
@@ -75,6 +108,15 @@ async function attemptLogin({ username, password, source, eventType, attackId = 
     attackId,
     requestId,
   });
+
+  if (isPhase2Enabled()) {
+    // Phase 2: Reset failed attempts on successful login
+    await user.resetLoginAttempts();
+  } else {
+    // Phase 1: Clear the counter
+    user.failedLoginAttempts = 0;
+    await user.save();
+  }
 
   if (source === 'ATTACK_SIMULATOR') {
     // Mark the account as compromised in the lab's database state so the
